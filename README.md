@@ -1,17 +1,15 @@
 # High performance video for the web
 
-These are the resources you need for the codelab [High performance video for the web](https://codelabs.developers.google.com/codelabs/adaptive-web-media/#0).
+Thia code has the resources you need for the codelab [High performance video for the web](https://codelabs.developers.google.com/codelabs/adaptive-web-media/#0).
 
-This is a work in progress.
-
-If you find a mistake, please [file an issue](https://github.com/googlecodelabs/adapative-web-media/issues). Thanks!
+This is a work in progress. If you find a mistake or have a suggestion, please [file an issue](https://github.com/googlecodelabs/adaptive-web-media/issues). Thanks!
 
 ## What you'll learn
 * Techniques to make the most of the video element.
+* Easy ways to implement subtitles, captions and descriptions.
+* The basics of Dynamic Adaptive Streaming over HTTP (DASH).
 * How to build a simple adaptive streaming video player.
-* Encoding and packaging basics.
-* An introduction to Dynamic Adaptive Streaming over HTTP (DASH).
-* Media delivery testing, across devices and different bandwidths.
+* Media delivery testing across devices and different bandwidths.
 
 ## What you'll need
 * Chrome 47 or above

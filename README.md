@@ -2,7 +2,7 @@
 
 Thia code has the resources you need for the codelab [High performance video for the web](https://codelabs.developers.google.com/codelabs/adaptive-web-media/#0).
 
-[![Screenshot with captions from blender.org film Big Buck Bunny](https://goo.gl/QVJrmV)](http://googlecodelabs.github.io/adaptive-web-media/step-03/)
+<a href="http://googlecodelabs.github.io/adaptive-web-media/step-03/" title="Step 3 live on GitHub Pages"><img src="https://goo.gl/QVJrmV" alt="Framegrab with captions from Big Buck Bunny, an open source film created by blender.org" style="max-width: 50%" /></a>
 
 This is a work in progress. If you find a mistake or have a suggestion, please [file an issue](https://github.com/googlecodelabs/adaptive-web-media/issues). Thanks!
 

@@ -4,6 +4,8 @@ Thia code has the resources you need for the codelab [High performance video for
 
 <a href="http://googlecodelabs.github.io/adaptive-web-media/step-03/" title="Step 3 live on GitHub Pages"><img src="https://goo.gl/QVJrmV" alt="Framegrab with captions from Big Buck Bunny, an open source film created by blender.org" width="540" /></a>
 
+<div style="color: #ccc;" id="copyright">© Copyright 2008, <a href="https://blender.org">Blender Foundation</a> | <a href="https://bigbuckbunny.org">bigbuckbunny.org</a></div>
+
 This is a work in progress. If you find a mistake or have a suggestion, please [file an issue](https://github.com/googlecodelabs/adaptive-web-media/issues). Thanks!
 
 You can view a completed version of each step live at [googlecodelabs.github.io/adaptive-web-media](https://googlecodelabs.github.io/adaptive-web-media/). This is a [GitHub Pages](https://pages.github.com) site that corresponds to the gh-pages branch of this repo.

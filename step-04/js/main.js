@@ -1,26 +1,42 @@
 'use strict';
 
-var video = window.video = document.querySelector('video');
+const videoUrl = 'video/bunny.webm';
+const videoSize = 2165175;
+const chunkSize = videoSize / 5;
 
-var url = 'video/bunny.webm';
+var video = document.querySelector('video');
+var mediaSource = new MediaSource();
 
-function getVideo(end) {
-  var range = 'bytes=' + 0 + '-' + end;
-  console.log('range: ', range);
-  var options = {
-    headers: {
-      'Content-Type': 'video/webm',
-      'Range': range
-    }
-  };
-  fetch(url, options).then(function(response) {
-    return response.blob();
-  }).then(function(blob) {
-    video.src = window.URL.createObjectURL(blob);
-  });
-}
+video.src = URL.createObjectURL(mediaSource);
 
-for (var i = 1; i !== 59; ++i) {
-  var chunkSize = 50000;
-  getVideo(i * chunkSize);
-}
+mediaSource.addEventListener('sourceopen', event => {
+  let sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vorbis,vp8"');
+
+  (function fetchChunk(startRange) {
+
+    let endRange = startRange + chunkSize - 1;
+    let options = {
+      headers: {
+        'Content-Type': 'video/webm',
+        'Range': `bytes=${startRange}-${endRange}`
+      }
+    };
+
+    return fetch(videoUrl, options)
+    .then(response => response.arrayBuffer())
+    .then(arrayBuffer => {
+      sourceBuffer.appendBuffer(arrayBuffer);
+      sourceBuffer.addEventListener('updateend', event => {
+        if (!sourceBuffer.updating && mediaSource.readyState == 'open') {
+          mediaSource.endOfStream();
+        }
+      });
+
+      let nextStartRange = endRange + 1;
+      if (nextStartRange < videoSize) {
+        return fetchChunk(nextStartRange);
+      }
+    });
+
+  })(0); // Start the recursive call by self calling.
+}, { once: true });

@@ -1,8 +1,10 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  font-weight: 900;
+
 }
 
 video {
-  width: 640px;
+  width: 50%;
   max-width: 100%;
 }
